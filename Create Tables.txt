@@ -1,0 +1,52 @@
+CREATE TABLE Movies (
+	Movie_ID INT AUTO_INCREMENT PRIMARY KEY,
+	Title VARCHAR(50),
+	Release_Year INT,
+	Certificate VARCHAR(50),
+	Runtime INT,
+	Rating DECIMAL(2,1),
+	Earnings INT,
+	Genre_ID INT,
+	Director_ID INT,
+	Studio_ID INT,
+	FOREIGN KEY (Genre_ID) REFERENCES Genre (Genre_ID),
+	FOREIGN KEY (Director_ID) REFERENCES Directors (Director_ID),
+	FOREIGN KEY (Studio_ID) REFERENCES Studios (Studio_ID)
+);
+
+
+CREATE TABLE Actors (
+	Actor_ID INT AUTO_INCREMENT PRIMARY KEY,
+	Actor_Name VARCHAR(50),
+	Actor_Sex CHAR(1),
+	Actor_Nationality VARCHAR(50),
+);
+
+
+CREATE TABLE MoviesActors (
+	Movie_ID INT,
+	Actor_ID INT,
+	PRIMARY KEY (Movie_ID, Actor_ID),
+	FOREIGN KEY (Movie_ID) REFERENCES Movies (Movie_ID),
+	FOREIGN KEY (Actor_ID) REFERENCES Actors (Actor_ID)
+);
+
+CREATE TABLE Genre (
+	Genre_ID INT AUTO_INCREMENT PRIMARY KEY,
+	Genre_Name VARCHAR(50)
+);
+
+CREATE TABLE Studios (
+	Studio_ID INT AUTO_INCREMENT PRIMARY KEY,
+	Studio_Name VARCHAR(50),
+	Studio_Country VARCHAR(50),
+	Studio_Founded INT
+);
+
+CREATE TABLE DIRECTORS (
+	Director_ID INT AUTO_INCREMENT PRIMARY KEY,
+	Director_Name VARCHAR(50),
+	Director_Sex CHAR(1),
+	Director_Nationality VARCHAR(50)
+);
+		
