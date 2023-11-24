@@ -1,0 +1,76 @@
+INSERT INTO Genre (Genre_Name) VALUES
+('Drama'), ('Action'), ('Biography'), ('Adventure'), ('Crime'), ('Comedy'), ('Animation');
+
+INSERT INTO studios (studio_name, studio_country, studio_founded)
+VALUES
+('Castle Rock Entertainment', 'USA', 1987),
+('Marvel Studios', 'USA', 1993),
+('Paramount Pictures', 'USA', 1912),
+('Warner Bros. Pictures', 'USA', 1923),
+('Lucasfilm', 'USA', 1971),
+('DC Films', 'USA', 1923),
+('Zoetrope Studios', 'USA', 1969),
+('Miramax Films', 'USA', 1979),
+('PolyGram Filmed Entertainment', 'USA', 1979),
+('A Band Apart', 'USA', 1991),
+('Pixar Animation Studios', 'USA', 1986),
+('Dreamworks Animation', 'USA', 1997),
+('Aamir Khan Productions', 'India', 1999),
+('Studio Ghibli', 'Japan', 1985),
+('Universal Pictures', 'USA', 1912);
+
+
+INSERT INTO directors (director_name, director_sex, director_nationality, director_birthdate)
+VALUES
+('Frank Darabont', 'M', 'Hungarian-American', '1959-01-28'),
+('Anthony Russo', 'M', 'American', '1970-02-03'),
+('Robert Zemeckis', 'M', 'American', '1952-05-14'),
+('Lana Wachowski', 'F', 'American', '1965-06-21'),
+('Martin Scorsese', 'M', 'American', '1942-11-17'),
+('Irvin Kershner', 'M', 'American', '1923-04-29'),
+('Christopher Nolan', 'M', 'British-American', '1970-07-30'),
+('Todd Phillips', 'M', 'American', '1970-12-20'),
+('Steven Spielberg', 'M', 'American', '1946-12-18');
+
+
+
+
+INSERT INTO Movies (Title, Release_Year, Certificate, Runtime, Rating, Earnings, Genre_ID, Director_ID, Studio_ID)
+VALUES
+(The Shawshank Redemption	1994	A	142	Drama	9.3	28,341,469),
+(Avengers: Endgame	2019	UA	181	8.4	858,373,000),
+(Avengers: Infinity War	2018	UA	149	8.4	678,815,482),
+(Forrest Gump	1994	UA	142	8.8	330,252,182),
+(The Matrix	1999	A	136	8.7	171,479,930),
+(Goodfellas	1990	A	146	8.7	46,836,394),
+(Star Wars: Episode V - The Empire Strikes Back	1980	UA	124	8.7	290,475,067),
+(Interstellar	2014	UA	169	8.6	188,020,017),
+(Joker		2019	A	122	8.5	335,451,311),
+(Raiders of the Lost Ark	1981	A	115	8.4	248,159,971),
+(Apocalypse Now	1979	R	147	8.4	83,471,511),
+(Good Will Hunting	1997	U	126	8.3	138,433,435),
+(Star Wars: Episode VI - Return of the Jedi	1983	U	131	8.3	309,125,409),
+(The Big Lebowski	1998	R	117	8.1	17,498,804),
+(Kill Bill: Vol. 1	2003	R	111	8.1	70,099,045),
+(Finding Nemo	2003	U	100	8.1	380,843,261),
+(Monsters, Inc.	2001	U	92	8.1	289,916,256),
+(No Country for Old Men	2007	R	122	8.1	74,283,625),
+(How to Train Your Dragon	2010	U	98	8.1	217,581,231),
+(Lagaan: Once Upon a Time in India	2001	U	224	8.1	70,147),
+(Indiana Jones and the Last Crusade	1989	U	127	8.2	197,171,806),
+(Toy Story 3	2010	U	103	8.2	415,004,880),
+(Mononoke-hime	1997	U	134	8.4	2,375,308),
+(Pulp Fiction	1994	A	154	8.9	107,928,762),
+(Schindler's List	1993	A	195	Biography	8.9	96,898,818);
+
+
+
+
+
+
+
+
+
+
+
+

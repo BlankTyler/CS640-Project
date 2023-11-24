@@ -1,0 +1,246 @@
+INSERT INTO genres (genre_name) VALUES
+('Drama'), ('Action'), ('Biography'), ('Adventure'), ('Crime'), ('Comedy'), ('Animation');
+
+INSERT INTO studios (studio_name, studio_country, studio_founded)
+VALUES
+('Castle Rock Entertainment', 'USA', 1987),
+('Marvel Studios', 'USA', 1993),
+('Paramount Pictures', 'USA', 1912),
+('Warner Bros. Pictures', 'USA', 1923),
+('Lucasfilm', 'USA', 1971),
+('DC Films', 'USA', 1923),
+('Zoetrope Studios', 'USA', 1969),
+('Miramax Films', 'USA', 1979),
+('PolyGram Filmed Entertainment', 'USA', 1979),
+('A Band Apart', 'USA', 1991),
+('Pixar Animation Studios', 'USA', 1986),
+('Dreamworks Animation', 'USA', 1997),
+('Aamir Khan Productions', 'India', 1999),
+('Studio Ghibli', 'Japan', 1985),
+('Universal Pictures', 'USA', 1912);
+
+
+INSERT INTO directors (director_name, director_sex, director_nationality, director_birthdate)
+VALUES
+  ('Frank Darabont', 'M', 'Hungarian-American', '1959-01-28'),
+  ('Anthony Russo', 'M', 'American', '1970-02-03'),
+  ('Robert Zemeckis', 'M', 'American', '1952-05-14'),
+  ('Lana Wachowski', 'F', 'American', '1965-06-21'),
+  ('Martin Scorsese', 'M', 'American', '1942-11-17'),
+  ('Irvin Kershner', 'M', 'American', '1923-04-29'),
+  ('Christopher Nolan', 'M', 'British-American', '1970-07-30'),
+  ('Todd Phillips', 'M', 'American', '1970-12-20'),
+  ('Steven Spielberg', 'M', 'American', '1946-12-18'),
+  ('Francis Ford Coppola', 'M', 'American', '1939-04-07'),
+  ('Gus Van Sant', 'M', 'American', '1952-07-24'),
+  ('Richard Marquand', 'M', 'Welsh', '1937-09-22'),
+  ('Joel Coen', 'M', 'American', '1954-11-29'),
+  ('Quentin Tarantino', 'M', 'American', '1963-03-27'),
+  ('Andrew Stanton', 'M', 'American', '1965-12-03'),
+  ('Pete Docter', 'M', 'American', '1968-10-09'),
+  ('Ethan Coen', 'M', 'American', '1957-09-21'),
+  ('Dean DeBlois', 'M', 'Canadian', '1970-06-07'),
+  ('Ashutosh Gowariker', 'M', 'Indian', '1964-02-15'),
+  ('Steven Spielberg', 'M', 'American', '1946-12-18'),
+  ('Lee Unkrich', 'M', 'American', '1967-08-08'),
+  ('Hayao Miyazaki', 'M', 'Japanese', '1941-01-05');
+
+
+
+INSERT INTO actors (actor_name, actor_sex, actor_nationality, actor_birthdate)
+VALUES
+('Tim Robbins', 'M', 'American', '1958-10-16'),
+('Morgan Freeman', 'M', 'American', '1937-06-01'),
+('Bob Gunton', 'M', 'American', '1945-11-15'),
+('William Sadler', 'M', 'American', '1950-04-13'),
+('Joe Russo', 'M', 'American', '1971-07-08'),
+('Robert Downey Jr.', 'M', 'American', '1965-04-04'),
+('Chris Evans', 'M', 'American', '1981-06-13'),
+('Mark Ruffalo', 'M', 'American', '1967-11-22'),
+('Tom Hanks', 'M', 'American', '1956-07-09'),
+('Robin Wright', 'F', 'American', '1966-04-08'),
+('Gary Sinise', 'M', 'American', '1955-03-17'),
+('Sally Field', 'F', 'American', '1946-11-06'),
+('Lilly Wachowski', 'F', 'American', '1967-12-29'),
+('Keanu Reeves', 'M', 'Canadian', '1964-09-02'),
+('Laurence Fishburne', 'M', 'American', '1961-07-30'),
+('Carrie-Anne Moss', 'F', 'Canadian', '1967-08-21'),
+('Robert De Niro', 'M', 'American', '1943-08-17'),
+('Ray Liotta', 'M', 'American', '1954-12-18'),
+('Joe Pesci', 'M', 'American', '1943-02-09'),
+('Lorraine Bracco', 'F', 'American', '1954-10-02'),
+('Mark Hamill', 'M', 'American', '1951-09-25'),
+('Harrison Ford', 'M', 'American', '1942-07-13'),
+('Carrie Fisher', 'F', 'American', '1956-10-21'),
+('Billy Dee Williams', 'M', 'American', '1937-04-06'),
+('Matthew McConaughey', 'M', 'American', '1969-11-04'),
+('Anne Hathaway', 'F', 'American', '1982-11-12'),
+('Jessica Chastain', 'F', 'American', '1977-03-24'),
+('Mackenzie Foy', 'F', 'American', '2000-11-10'),
+('Joaquin Phoenix', 'M', 'American', '1974-10-28'),
+('Robert De Niro', 'M', 'American', '1943-08-17'),
+('Zazie Beetz', 'F', 'German-American', '1991-06-01'),
+('Frances Conroy', 'F', 'American', '1953-11-13'),
+('Harrison Ford', 'M', 'American', '1942-07-13'),
+('Karen Allen', 'F', 'American', '1951-10-05'),
+('Paul Freeman', 'M', 'British', '1943-01-18'),
+('John Rhys-Davies', 'M', 'Welsh', '1944-05-05'),
+('Martin Sheen', 'M', 'American', '1940-08-03'),
+('Marlon Brando', 'M', 'American', '1924-04-03'),
+('Robert Duvall', 'M', 'American', '1931-01-05'),
+('Frederic Forrest', 'M', 'American', '1936-12-23'),
+('Robin Williams', 'M', 'American', '1951-07-21'),
+('Matt Damon', 'M', 'American', '1970-10-08'),
+('Ben Affleck', 'M', 'American', '1972-08-15'),
+('Stellan Skarsgård', 'M', 'Swedish', '1951-06-13'),
+('Mark Hamill', 'M', 'American', '1951-09-25'),
+('Harrison Ford', 'M', 'American', '1942-07-13'),
+('Carrie Fisher', 'F', 'American', '1956-10-21'),
+('Billy Dee Williams', 'M', 'American', '1937-04-06'),
+('Ethan Coen', 'M', 'American', '1957-09-21'),
+('Jeff Bridges', 'M', 'American', '1949-12-04'),
+('John Goodman', 'M', 'American', '1952-06-20'),
+('Julianne Moore', 'F', 'American', '1960-12-03'),
+('Uma Thurman', 'F', 'American', '1970-04-29'),
+('David Carradine', 'M', 'American', '1936-12-08'),
+('Daryl Hannah', 'F', 'American', '1960-12-03'),
+('Michael Madsen', 'M', 'American', '1957-09-25'),
+('Lee Unkrich', 'M', 'American', '1967-08-08'),
+('Albert Brooks', 'M', 'American', '1947-07-22'),
+('Ellen DeGeneres', 'F', 'American', '1958-01-26'),
+('Alexander Gould', 'M', 'American', '1994-05-04'),
+('David Silverman', 'M', 'American', '1957-03-15'),
+('Lee Unkrich', 'M', 'American', '1967-08-08'),
+('Billy Crystal', 'M', 'American', '1948-03-14'),
+('John Goodman', 'M', 'American', '1952-06-20'),
+('Joel Coen', 'M', 'American', '1954-11-29'),
+('Tommy Lee Jones', 'M', 'American', '1946-09-15'),
+('Javier Bardem', 'M', 'Spanish', '1969-03-01'),
+('Josh Brolin', 'M', 'American', '1968-02-12'),
+('Chris Sanders', 'M', 'American', '1962-03-12'),
+('Jay Baruchel', 'M', 'Canadian', '1982-04-09'),
+('Gerard Butler', 'M', 'Scottish', '1969-11-13'),
+('Christopher Mintz-Plasse', 'M', 'American', '1989-06-20'),
+('Aamir Khan', 'M', 'Indian', '1965-03-14'),
+('Raghuvir Yadav', 'M', 'Indian', '1957-06-25'),
+('Gracy Singh', 'F', 'Indian', '1980-07-20'),
+('Rachel Shelley', 'F', 'British', '1969-08-25'),
+('Harrison Ford', 'M', 'American', '1942-07-13'),
+('Sean Connery', 'M', 'Scottish', '1930-08-25'),
+('Alison Doody', 'F', 'Irish', '1966-11-11'),
+('Denholm Elliott', 'M', 'English', '1922-05-31'),
+('Tom Hanks', 'M', 'American', '1956-07-09'),
+('Tim Allen', 'M', 'American', '1953-06-13'),
+('Joan Cusack', 'F', 'American', '1962-10-11'),
+('Ned Beatty', 'M', 'American', '1937-07-06'),
+('Yôji Matsuda', 'M', 'Japanese', '1960-10-19'),
+('Yuriko Ishida', 'F', 'Japanese', '1969-10-03'),
+('Yûko Tanaka', 'F', 'Japanese', '1955-04-29'),
+('Billy Crudup', 'M', 'American', '1968-07-08'),
+('John Travolta', 'M', 'American', '1954-02-18'),
+('Uma Thurman', 'F', 'American', '1970-04-29'),
+('Samuel L. Jackson', 'M', 'American', '1948-12-21'),
+('Bruce Willis', 'M', 'American', '1955-03-19'),
+('Liam Neeson', 'M', 'Northern Irish', '1952-06-07'),
+('Ralph Fiennes', 'M', 'English', '1962-12-22'),
+('Ben Kingsley', 'M', 'English', '1943-12-31'),
+('Caroline Goodall', 'F', 'British', '1959-11-13');
+
+
+INSERT INTO movies (title, release_year, certificate, runtime, genre_id, rating, director_id, studio_id, earnings)
+VALUES
+  ('The Shawshank Redemption', 1994, 'A', '142', 1, 9.3, 1, 1, 28341469),
+  ('Avengers: Endgame', 2019, 'UA', '181', 2, 8.4, 2, 2, 858373000),
+  ('Avengers: Infinity War', 2018, 'UA', '149', 2, 8.4, 2, 2, 678815482),
+  ('Forrest Gump', 1994, 'UA', '142', 1, 8.8, 3, 3, 330252182),
+  ('The Matrix', 1999, 'A', '136', 2, 8.7, 4, 4, 171479930),
+  ('Goodfellas', 1990, 'A', '146', 3, 8.7, 5, 5, 46836394),
+  ('Star Wars: Episode V - The Empire Strikes Back', 1980, 'UA', '124', 2, 8.7, 6, 5, 290475067),
+  ('Interstellar', 2014, 'UA', '169', 4, 8.6, 7, 3, 188020017),
+  ('Joker', 2019, 'A', '122', 5, 8.5, 8, 4, 335451311),
+  ('Raiders of the Lost Ark', 1981, 'A', '115', 2, 8.4, 9, 3, 248159971),
+  ('Apocalypse Now', 1979, 'R', '147', 1, 8.4, 10, 6, 83471511),
+  ('Good Will Hunting', 1997, 'U', '126', 1, 8.3, 11, 5, 138433435),
+  ('Star Wars: Episode VI - Return of the Jedi', 1983, 'U', '131', 2, 8.3, 6, 5, 309125409),
+  ('The Big Lebowski', 1998, 'R', '117', 6, 8.1, 12, 1, 17498804),
+  ('Kill Bill: Vol. 1', 2003, 'R', '111', 2, 8.1, 13, 7, 70099045),
+  ('Finding Nemo', 2003, 'U', '100', 7, 8.1, 14, 11, 380843261),
+  ('Monsters, Inc.', 2001, 'U', '92', 7, 8.1, 15, 11, 289916256),
+  ('No Country for Old Men', 2007, 'R', '122', 5, 8.1, 16, 8, 74283625),
+  ('How to Train Your Dragon', 2010, 'U', '98', 7, 8.1, 17, 12, 217581231),
+  ('Lagaan: Once Upon a Time in India', 2001, 'U', '224', 4, 8.1, 18, 13, 70147),
+  ('Indiana Jones and the Last Crusade', 1989, 'U', '127', 2, 8.2, 9, 3, 197171806),
+  ('Toy Story 3', 2010, 'U', '103', 7, 8.2, 19, 11, 415004880),
+  ('Mononoke-hime', 1997, 'U', '134', 7, 8.4, 20, 14, 2375308),
+  ('Pulp Fiction', 1994, 'A', '154', 5, 8.9, 13, 8, 107928762),
+  ('Schindler\'s List', 1993, 'A', '195', 3, 8.9, 7, 3, 96898818);
+
+
+INSERT INTO movies_actors (movie_id, actor_id)
+VALUES
+    -- The Shawshank Redemption actors
+    (1, 1), (1, 2), (1, 3), (1, 4),
+    -- Avengers: Endgame actors
+    (2, 5), (2, 6), (2, 7), (2, 8),
+    -- Avengers: Infinity War actors
+    (3, 5), (3, 6), (3, 7), (3, 8),
+    -- Forrest Gump actors
+    (4, 9), (4, 10), (4, 11), (4, 12),
+    -- The Matrix actors
+    (5, 13), (5, 14), (5, 15), (5, 16),
+    -- Goodfellas actors
+    (6, 17), (6, 18), (6, 19), (6, 20),
+    -- Star Wars: Episode V actors
+    (7, 21), (7, 22), (7, 23), (7, 24),
+    -- Interstellar actors
+    (8, 25), (8, 26), (8, 27), (8, 28),
+    -- Joker actors
+    (9, 29), (9, 30), (9, 31), (9, 32),
+    -- Raiders of the Lost Ark actors
+    (10, 22), (10, 34), (10, 35), (10, 36),
+    -- Apocalypse Now actors
+    (11, 37), (11, 38), (11, 39), (11, 40),
+    -- Good Will Hunting actors
+    (12, 41), (12, 42), (12, 43), (12, 44),
+    -- Star Wars: Episode VI actors
+    (13, 21), (13, 22), (13, 23), (13, 24),
+    -- The Big Lebowski actors
+    (14, 49), (14, 50), (14, 51), (14, 52),
+    -- Kill Bill: Vol. 1 actors
+    (15, 53), (15, 54), (15, 55), (15, 56),
+    -- Finding Nemo actors
+    (16, 57), (16, 58), (16, 59), (16, 60),
+    -- Monsters, Inc. actors
+    (17, 61), (17, 62), (17, 63), (17, 64),
+    -- No Country for Old Men actors
+    (18, 65), (18, 66), (18, 67), (18, 68),
+    -- How to Train Your Dragon actors
+    (19, 69), (19, 70), (19, 71), (19, 72),
+    -- Lagaan: Once Upon a Time in India actors
+    (20, 73), (20, 74), (20, 75), (20, 76),
+    -- Indiana Jones and the Last Crusade actors
+    (21, 22), (21, 78), (21, 79), (21, 80),
+    -- Toy Story 3 actors
+    (22, 81), (22, 82), (22, 83), (22, 84),
+    -- Mononoke-hime actors
+    (23, 85), (23, 86), (23, 87), (23, 88),
+    -- Pulp Fiction actors
+    (24, 89), (24, 90), (24, 91), (24, 92),
+    -- Schindler's List actors
+    (25, 93), (25, 94), (25, 95), (25, 96);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

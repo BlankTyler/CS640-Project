@@ -1,52 +1,51 @@
-CREATE TABLE Movies (
-	Movie_ID INT AUTO_INCREMENT PRIMARY KEY,
-	Title VARCHAR(50),
-	Release_Year INT,
-	Certificate VARCHAR(50),
-	Runtime INT,
-	Rating DECIMAL(2,1),
-	Earnings INT,
-	Genre_ID INT,
-	Director_ID INT,
-	Studio_ID INT,
-	FOREIGN KEY (Genre_ID) REFERENCES Genre (Genre_ID),
-	FOREIGN KEY (Director_ID) REFERENCES Directors (Director_ID),
-	FOREIGN KEY (Studio_ID) REFERENCES Studios (Studio_ID)
+CREATE TABLE genres (
+    genre_id INT AUTO_INCREMENT PRIMARY KEY,
+    genre_name VARCHAR(50)
 );
 
-
-CREATE TABLE Actors (
-	Actor_ID INT AUTO_INCREMENT PRIMARY KEY,
-	Actor_Name VARCHAR(50),
-	Actor_Sex CHAR(1),
-	Actor_Nationality VARCHAR(50),
+CREATE TABLE studios (
+    studio_id INT AUTO_INCREMENT PRIMARY KEY,
+    studio_name VARCHAR(50),
+    studio_country VARCHAR(50),
+    studio_founded INT
 );
 
-
-CREATE TABLE MoviesActors (
-	Movie_ID INT,
-	Actor_ID INT,
-	PRIMARY KEY (Movie_ID, Actor_ID),
-	FOREIGN KEY (Movie_ID) REFERENCES Movies (Movie_ID),
-	FOREIGN KEY (Actor_ID) REFERENCES Actors (Actor_ID)
+CREATE TABLE directors (
+    director_id INT AUTO_INCREMENT PRIMARY KEY,
+    director_name VARCHAR(50),
+    director_sex ENUM('M', 'F'),
+    director_nationality VARCHAR(50),
+    director_birthdate DATE
 );
 
-CREATE TABLE Genre (
-	Genre_ID INT AUTO_INCREMENT PRIMARY KEY,
-	Genre_Name VARCHAR(50)
+CREATE TABLE actors (
+    actor_id INT AUTO_INCREMENT PRIMARY KEY,
+    actor_name VARCHAR(50),
+    actor_sex ENUM('M', 'F'),
+    actor_nationality VARCHAR(50),
+    actor_birthdate DATE
 );
 
-CREATE TABLE Studios (
-	Studio_ID INT AUTO_INCREMENT PRIMARY KEY,
-	Studio_Name VARCHAR(50),
-	Studio_Country VARCHAR(50),
-	Studio_Founded INT
+CREATE TABLE movies (
+    movie_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(50),
+    release_year INT,
+    certificate ENUM('A', 'U', 'UA', 'R'),
+    runtime VARCHAR(10),
+    rating DECIMAL(2,1),
+    earnings INT,
+    genre_id INT,
+    director_id INT,
+    studio_id INT,
+    FOREIGN KEY (genre_id) REFERENCES genres (genre_id),
+    FOREIGN KEY (director_id) REFERENCES directors (director_id),
+    FOREIGN KEY (studio_id) REFERENCES studios (studio_id)
 );
 
-CREATE TABLE DIRECTORS (
-	Director_ID INT AUTO_INCREMENT PRIMARY KEY,
-	Director_Name VARCHAR(50),
-	Director_Sex CHAR(1),
-	Director_Nationality VARCHAR(50)
+CREATE TABLE movies_actors (
+    movie_id INT,
+    actor_id INT,
+    PRIMARY KEY (movie_id, actor_id),
+    FOREIGN KEY (movie_id) REFERENCES movies (movie_id),
+    FOREIGN KEY (actor_id) REFERENCES actors (actor_id)
 );
-		

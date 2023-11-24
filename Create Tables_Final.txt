@@ -1,0 +1,51 @@
+CREATE TABLE genres (
+    genre_id INT AUTO_INCREMENT PRIMARY KEY,
+    genre_name VARCHAR(50)
+);
+
+CREATE TABLE studios (
+    studio_id INT AUTO_INCREMENT PRIMARY KEY,
+    studio_name VARCHAR(50),
+    studio_country VARCHAR(50),
+    studio_founded INT
+);
+
+CREATE TABLE directors (
+    director_id INT AUTO_INCREMENT PRIMARY KEY,
+    director_name VARCHAR(50),
+    director_sex ENUM('M', 'F'),
+    director_nationality VARCHAR(50),
+    director_birthdate DATE
+);
+
+CREATE TABLE actors (
+    actor_id INT AUTO_INCREMENT PRIMARY KEY,
+    actor_name VARCHAR(50),
+    actor_sex ENUM('M', 'F'),
+    actor_nationality VARCHAR(50),
+    actor_birthdate DATE
+);
+
+CREATE TABLE movies (
+    movie_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(50),
+    release_year INT,
+    certificate ENUM('A', 'U', 'UA', 'R'),
+    runtime VARCHAR(10),
+    rating DECIMAL(2,1),
+    earnings INT,
+    genre_id INT,
+    director_id INT,
+    studio_id INT,
+    FOREIGN KEY (genre_id) REFERENCES genres (genre_id),
+    FOREIGN KEY (director_id) REFERENCES directors (director_id),
+    FOREIGN KEY (studio_id) REFERENCES studios (studio_id)
+);
+
+CREATE TABLE movies_actors (
+    movie_id INT,
+    actor_id INT,
+    PRIMARY KEY (movie_id, actor_id),
+    FOREIGN KEY (movie_id) REFERENCES movies (movie_id),
+    FOREIGN KEY (actor_id) REFERENCES actors (actor_id)
+);
