@@ -147,33 +147,34 @@ VALUES
 ('Caroline Goodall', 'F', 'British', '1959-11-13');
 
 
-INSERT INTO movies (title, release_year, certificate, runtime, genre_id, rating, director_id, studio_id, earnings)
+INSERT INTO movies (title, release_year, certificate, runtime, rating, earnings, genre_id, director_id, studio_id)
 VALUES
-  ('The Shawshank Redemption', 1994, 'A', '142', 1, 9.3, 1, 1, 28341469),
-  ('Avengers: Endgame', 2019, 'UA', '181', 2, 8.4, 2, 2, 858373000),
-  ('Avengers: Infinity War', 2018, 'UA', '149', 2, 8.4, 2, 2, 678815482),
-  ('Forrest Gump', 1994, 'UA', '142', 1, 8.8, 3, 3, 330252182),
-  ('The Matrix', 1999, 'A', '136', 2, 8.7, 4, 4, 171479930),
-  ('Goodfellas', 1990, 'A', '146', 3, 8.7, 5, 5, 46836394),
-  ('Star Wars: Episode V - The Empire Strikes Back', 1980, 'UA', '124', 2, 8.7, 6, 5, 290475067),
-  ('Interstellar', 2014, 'UA', '169', 4, 8.6, 7, 3, 188020017),
-  ('Joker', 2019, 'A', '122', 5, 8.5, 8, 4, 335451311),
-  ('Raiders of the Lost Ark', 1981, 'A', '115', 2, 8.4, 9, 3, 248159971),
-  ('Apocalypse Now', 1979, 'R', '147', 1, 8.4, 10, 6, 83471511),
-  ('Good Will Hunting', 1997, 'U', '126', 1, 8.3, 11, 5, 138433435),
-  ('Star Wars: Episode VI - Return of the Jedi', 1983, 'U', '131', 2, 8.3, 6, 5, 309125409),
-  ('The Big Lebowski', 1998, 'R', '117', 6, 8.1, 12, 1, 17498804),
-  ('Kill Bill: Vol. 1', 2003, 'R', '111', 2, 8.1, 13, 7, 70099045),
-  ('Finding Nemo', 2003, 'U', '100', 7, 8.1, 14, 11, 380843261),
-  ('Monsters, Inc.', 2001, 'U', '92', 7, 8.1, 15, 11, 289916256),
-  ('No Country for Old Men', 2007, 'R', '122', 5, 8.1, 16, 8, 74283625),
-  ('How to Train Your Dragon', 2010, 'U', '98', 7, 8.1, 17, 12, 217581231),
-  ('Lagaan: Once Upon a Time in India', 2001, 'U', '224', 4, 8.1, 18, 13, 70147),
-  ('Indiana Jones and the Last Crusade', 1989, 'U', '127', 2, 8.2, 9, 3, 197171806),
-  ('Toy Story 3', 2010, 'U', '103', 7, 8.2, 19, 11, 415004880),
-  ('Mononoke-hime', 1997, 'U', '134', 7, 8.4, 20, 14, 2375308),
-  ('Pulp Fiction', 1994, 'A', '154', 5, 8.9, 13, 8, 107928762),
-  ('Schindler\'s List', 1993, 'A', '195', 3, 8.9, 7, 3, 96898818);
+('The Shawshank Redemption', 1994, 'A', '142', 9.3, 28341469, 1, 1, 1),
+('Avengers: Endgame', 2019, 'UA', '181', 8.4, 858373000, 2, 2, 2),
+('Avengers: Infinity War', 2018, 'UA', '149', 8.4, 678815482, 2, 2, 2),
+('Forrest Gump', 1994, 'UA', '142', 8.8, 330252182, 1, 3, 3),
+('The Matrix', 1999, 'A', '136', 8.7, 171479930, 2, 4, 4),
+('Goodfellas', 1990, 'A', '146', 8.7, 46836394, 3, 5, 8),
+('Star Wars: Episode V - The Empire Strikes Back', 1980, 'UA', '124', 8.7, 290475067, 2, 6, 5),
+('Interstellar', 2014, 'UA', '169', 8.6, 188020017, 4, 7, 4),
+('Joker', 2019, 'A', '122', 8.5, 335451311, 5, 8, 3),
+('Raiders of the Lost Ark', 1981, 'A', '115', 8.4, 248159971, 2, 9, 3),
+('Apocalypse Now', 1979, 'R', '147', 8.4, 83471511, 1, 10, 7),
+('Good Will Hunting', 1997, 'U', '126', 8.3, 138433435, 1, 11, 8),
+('Star Wars: Episode VI - Return of the Jedi', 1983, 'U', '131', 8.3, 309125409, 2, 12, 5),
+('The Big Lebowski', 1998, 'R', '117', 8.1, 17498804, 6, 13, 8),
+('Kill Bill: Vol. 1', 2003, 'R', '111', 8.1, 70099045, 5, 14, 8),
+('Finding Nemo', 2003, 'U', '100', 8.1, 380843261, 7, 15, 11),
+('Monsters, Inc.', 2001, 'U', '92', 8.1, 289916256, 7, 16, 11),
+('No Country for Old Men', 2007, 'R', '122', 8.1, 74283625, 5, 17, 15),
+('How to Train Your Dragon', 2010, 'U', '98', 8.1, 217581231, 7, 18, 12),
+('Lagaan: Once Upon a Time in India', 2001, 'U', '224', 8.1, 70147, 4, 19, 13),
+('Indiana Jones and the Last Crusade', 1989, 'U', '127', 8.2, 197171806, 2, 20, 3),
+('Toy Story 3', 2010, 'U', '103', 8.2, 415004880, 7, 21, 11),
+('Mononoke-hime', 1997, 'U', '134', 8.4, 2375308, 7, 22, 14),
+('Pulp Fiction', 1994, 'A', '154', 8.9, 107928762, 5, 14, 8),
+('Schindler\'s List', 1993, 'A', '195', 8.9, 96898818, 3, 9, 15);
+
 
 
 INSERT INTO movies_actors (movie_id, actor_id)
