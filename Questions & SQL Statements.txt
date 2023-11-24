@@ -7,6 +7,11 @@ FROM movies
 JOIN genres ON movies.genre_id = genres.genre_id
 WHERE genres.genre_name = 'Action';
 
+List all movies where runtime is less than 100
+
+SELECT *
+FROM movies
+WHERE runtime < 100;
 
 List all movies in descending order by earnings
 
@@ -15,6 +20,13 @@ FROM movies
 ORDER BY earnings DESC;
 
 Advanced SQL Statements
+
+List all movies with female directors
+
+SELECT movies.*
+FROM movies
+JOIN directors ON movies.director_id = directors.director_id
+WHERE directors.director_sex = 'F';
 
 List all actors from a particular movie
 
@@ -30,5 +42,15 @@ SELECT movies.*
 FROM movies
 JOIN directors ON movies.director_id = directors.director_id
 WHERE directors.director_nationality = 'Japanese';
+
+List all movies where the number of female actors is greater than the number of male actors
+
+SELECT movies.*, COUNT(CASE WHEN actors.actor_sex = 'F' THEN 1 END) AS female_actors,
+               COUNT(CASE WHEN actors.actor_sex = 'M' THEN 1 END) AS male_actors
+FROM movies
+JOIN movies_actors ON movies.movie_id = movies_actors.movie_id
+JOIN actors ON movies_actors.actor_id = actors.actor_id
+GROUP BY movies.movie_id
+HAVING female_actors > male_actors;
 
 
