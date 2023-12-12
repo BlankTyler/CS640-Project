@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Movie</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #111;
+            color: #fff;
+        }
+        form {
+            width: 400px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background-color: #222;
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #ffcc00;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ffcc00;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #444;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #ffcc00;
+            color: #111;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <h1>Create New Movie</h1>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="release_year">Release Year:</label>
+    <input type="number" id="release_year" name="release_year" required>
+
+    <label for="certificate">Certificate:</label>
+    <select id="certificate" name="certificate" required>
+        <option value="A">A</option>
+        <option value="U">U</option>
+        <option value="UA">UA</option>
+        <option value="R">R</option>
+    </select>
+
+    <label for="runtime">Runtime:</label>
+    <input type="text" id="runtime" name="runtime" required>
+
+    <label for="rating">Rating:</label>
+    <input type="number" id="rating" name="rating" step="0.1" required>
+
+    <label for="earnings">Earnings:</label>
+    <input type="number" id="earnings" name="earnings" required>
+
+    <label for="genre_id">Genre:</label>
+    <select id="genre_id" name="genre_id" required>
+        <!-- Populate this dynamically from your database -->
+        <option value="1">Action</option>
+        <option value="2">Comedy</option>
+        <option value="3">Drama</option>
+        <!-- Add more genres as needed -->
+    </select>
+
+    <label for="director_id">Director:</label>
+    <input type="text" id="director_id" name="director_id" required>
+
+    <label for="studio_id">Studio:</label>
+    <input type="text" id="studio_id" name="studio_id" required>
+
+    <button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+<script>
+    function submitForm() {
+        var title = document.getElementById('title').value;
+        var release_year = document.getElementById('release_year').value;
+        var certificate = document.getElementById('certificate').value;
+        var runtime = document.getElementById('runtime').value;
+        var rating = document.getElementById('rating').value;
+        var earnings = document.getElementById('earnings').value;
+        var genre_id = document.getElementById('genre_id').value;
+        var director_id = document.getElementById('director_id').value;
+        var studio_id = document.getElementById('studio_id').value;
+
+        console.log('Movie Data:', { title, release_year, certificate, runtime, rating, earnings, genre_id, director_id, studio_id });
+        document.getElementById('dataForm').reset();
+    }
+</script>
+
+</body>
+</html>

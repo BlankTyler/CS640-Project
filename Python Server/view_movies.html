@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All Movies</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #111;
+            color: #fff;
+        }
+        button {
+            background-color: #ffcc00;
+            color: #111;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        table {
+            width: 80%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #444;
+        }
+        th {
+            background-color: #ffcc00;
+            color: #111;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="viewMovies()">View All Movies</button>
+
+<table id="moviesTable" style="display: none;">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Release Year</th>
+            <th>Certificate</th>
+            <th>Runtime</th>
+            <th>Rating</th>
+            <th>Earnings</th>
+            <th>Genre</th>
+            <th>Director</th>
+            <th>Studio</th>
+        </tr>
+    </thead>
+    <tbody id="moviesBody"></tbody>
+</table>
+
+<script>
+    function viewMovies() {
+        // Simulate fetching movies data from your database
+        var moviesData = [
+            { title: 'Movie 1', release_year: 2022, certificate: 'U', runtime: '2h 30m', rating: 8.5, earnings: 1000000, genre: 'Action', director: 'Director 1', studio: 'Studio 1' },
+            { title: 'Movie 2', release_year: 2021, certificate: 'A', runtime: '2h', rating: 7.8, earnings: 800000, genre: 'Drama', director: 'Director 2', studio: 'Studio 2' },
+            // Add more movie data as needed
+        ];
+
+        var table = document.getElementById('moviesTable');
+        var tbody = document.getElementById('moviesBody');
+        
+        // Clear previous data
+        tbody.innerHTML = '';
+
+        // Populate the table with movie data
+        moviesData.forEach(function(movie) {
+            var row = tbody.insertRow();
+            for (var key in movie) {
+                if (movie.hasOwnProperty(key)) {
+                    var cell = row.insertCell();
+                    cell.innerHTML = movie[key];
+                }
+            }
+        });
+
+        // Show the table
+        table.style.display = 'table';
+    }
+</script>
+
+</body>
+</html>

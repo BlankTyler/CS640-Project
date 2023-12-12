@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Genre</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #111;
+            color: #fff;
+        }
+        form {
+            width: 400px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background-color: #222;
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #ffcc00;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ffcc00;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #444;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #ffcc00;
+            color: #111;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <h1>Create New Genre</h1>
+    <label for="genre_name">Genre Name:</label>
+    <input type="text" id="genre_name" name="genre_name" required>
+
+    <button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+<script>
+    function submitForm() {
+        var genre_name = document.getElementById('genre_name').value;
+
+        console.log('Genre Data:', { genre_name });
+        document.getElementById('dataForm').reset();
+    }
+</script>
+
+</body>
+</html>
